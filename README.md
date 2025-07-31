@@ -1,49 +1,58 @@
 # Guessing-Game
-📌 فكرة اللعبة:
-لعبة بسيطة تعتمد على تخمين رقم مخفي يتم اختياره عشوائيًا.
-المستخدم يختار مستوى الصعوبة، ثم يحاول تخمين الرقم الصحيح خلال عدد محدد من المحاولات.
-يتم إعطاء تلميحات مثل "زد الرقم" أو "قلل الرقم"، وفي النهاية يمكنه إعادة اللعب أو إنهاؤها.
+🎮 Guessing Game – Project Description
+📌 Game Idea:
+A simple number guessing game where the player tries to guess a hidden number randomly selected by the system.
+The player chooses a difficulty level, and then attempts to guess the number within a limited number of tries.
+Hints are provided such as "Increase the number" or "Decrease the number", and the player can choose to play again after each round.
 
-🧠 طريقة اللعب:
-عند تشغيل اللعبة، تظهر رسالة ترحيبية مع 3 مستويات صعوبة:
-                                                                                                                            🟢 Easy: الأرقام من 1 إلى 10، عدد المحاولات = 5
-                                                                                                                         🟡 Medium: الأرقام من 1 إلى 100، عدد المحاولات = 10
-                                                                                                                          🔴 Hard: الأرقام من 1 إلى 1000، عدد المحاولات = 20
+🧠 How to Play:
+When the game starts, a welcome message appears and the user is prompted to choose from 3 difficulty levels:
 
-بعد اختيار المستوى، يتم توليد رقم عشوائي داخل المدى المحدد.
+Difficulty	Range	Attempts
+🟢 Easy	1 to 10	5 tries
+🟡 Medium	1 to 100	10 tries
+🔴 Hard	1 to 1000	20 tries
 
-يبدأ المستخدم بإدخال التخمينات:
+After selecting a level, a random number is generated within the corresponding range.
 
-إذا كان الرقم أصغر من الرقم الصحيح ➜ يظهر: "No, Increase!"
+The player enters guesses one by one:
 
-إذا كان الرقم أكبر من الرقم الصحيح ➜ يظهر: "No, Decrease!"
+If the guessed number is less than the target → "No, Increase!"
 
-إذا خمّن الرقم الصحيح ➜ يظهر: "You got it successfully in X trials!"
+If the guessed number is greater than the target → "No, Decrease!"
 
-إذا انتهت المحاولات بدون تخمين صحيح ➜ يتم الكشف عن الرقم الصحيح.
+If correct → "You got it successfully in X trials!"
 
-بعد كل جولة، يسأل البرنامج:
-                                                                                                                                "Do you want to play again? (y/n)"
+If out of attempts → the correct number is revealed.
 
-إذا اختار "y" ➜ تبدأ جولة جديدة
+After each round, the game asks:
 
-إذا اختار "n" ➜ تنتهي اللعبة برسالة شكر
+text
+Copy
+Edit
+Do you want to play again? (y/n)
+If the user types y → a new round starts.
 
-⚙️ الوظائف (Functions) المستخدمة:
-الدالة	الوظيفة
-                                                                                                                                show_levels()	عرض قائمة مستويات الصعوبة
-                                                                                                                  game_level_choice()	قراءة واختيار مستوى الصعوبة من المستخدم
-                                                                                                   set_game_settings(game_level)	ضبط مدى الأرقام وعدد المحاولات حسب المستوى
-                                                                                                                  start_play(limits, n_trials)	تنفيذ جولة اللعب وتخمين الرقم
-                                                                                                                       play_again()	سؤال المستخدم إذا كان يريد اللعب مرة أخرى
-                                                                                                                                          play()	إدارة تسلسل اللعبة بالكامل
+If the user types n → the game ends with a thank-you message.
 
-✅ مميزات اللعبة:
-واجهة تفاعلية باستخدام input() و print()
+⚙️ Functions Used:
+Function	Purpose
+show_levels()	Display difficulty level options
+game_level_choice()	Read and validate user difficulty choice
+set_game_settings(level)	Set range and number of attempts
+start_play(range, attempts)	Run the main guessing loop
+play_again()	Ask if user wants to restart
+play()	Manage the full game flow
 
-مستويات صعوبة مختلفة
+✅ Game Features:
+Interactive CLI using input() and print()
 
-إمكانية تكرار اللعب لأكثر من جولة
+Multiple difficulty levels for varied challenges
 
-تعليمات واضحة وتغذية راجعة فورية
+Option to replay multiple rounds
+
+Clear instructions and responsive feedback
+
+Modular structure for easy modification or upgrades
+
 
